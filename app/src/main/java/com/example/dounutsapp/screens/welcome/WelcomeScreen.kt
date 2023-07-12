@@ -23,9 +23,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.dounutsapp.R
-import com.example.dounutsapp.screens.VerticalSpacer
+import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.screens.welcome.composable.DonutsImages
-import com.example.dounutsapp.ui.theme.DarkPink
+import com.example.dounutsapp.ui.theme.darkPink
 import com.example.dounutsapp.ui.theme.black
 import com.example.dounutsapp.ui.theme.buttonText
 import com.example.dounutsapp.ui.theme.lightPink
@@ -33,7 +33,7 @@ import com.example.dounutsapp.ui.theme.pink
 import com.example.dounutsapp.ui.theme.size50
 import com.example.dounutsapp.ui.theme.size67
 import com.example.dounutsapp.ui.theme.space16
-import com.example.dounutsapp.ui.theme.space40
+import com.example.dounutsapp.ui.theme.space60
 import com.example.dounutsapp.ui.theme.welcomeDescription
 import com.example.dounutsapp.ui.theme.welcomeText
 import com.example.dounutsapp.ui.theme.white
@@ -54,12 +54,12 @@ private fun WelcomeContent(padding: PaddingValues, onClickButton: () -> Unit) {
         DonutsImages()
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
             Text(
-                modifier = Modifier.padding(start = space40),
+                modifier = Modifier.padding(start = space60),
                 text = "Gonuts\n" +
                         "with\n" +
                         "Donuts",
                 style = welcomeText,
-                color = DarkPink,
+                color = darkPink,
             )
             Image(
                 modifier = Modifier.size(80.dp, 150.dp),
@@ -69,7 +69,7 @@ private fun WelcomeContent(padding: PaddingValues, onClickButton: () -> Unit) {
         }
         VerticalSpacer(height = space16)
         Text(
-            modifier = Modifier.padding(horizontal = space40),
+            modifier = Modifier.padding(horizontal = space60),
             text = stringResource(R.string.description_welcome),
             style = welcomeDescription,
             color = pink
@@ -79,7 +79,7 @@ private fun WelcomeContent(padding: PaddingValues, onClickButton: () -> Unit) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(size67)
-                .padding(horizontal = space40),
+                .padding(horizontal = space60),
             colors = ButtonDefaults.buttonColors(white),
             shape = RoundedCornerShape(size50),
             onClick = onClickButton
