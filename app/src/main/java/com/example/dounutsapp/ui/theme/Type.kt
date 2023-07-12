@@ -42,3 +42,39 @@ val buttonText = TextStyle(
     fontWeight = FontWeight.SemiBold,
     fontFamily = inter,
 )
+
+val homeTitle = TextStyle(
+    fontSize = text18,
+    fontWeight = FontWeight.SemiBold,
+    fontFamily = inter,
+)
+
+val homeDonutName = TextStyle(
+    fontSize = text16,
+    fontWeight = FontWeight.Medium,
+    fontFamily = inter,
+)
+
+val homeDonutDescription = TextStyle(
+    fontSize = text12,
+    fontWeight = FontWeight.Normal,
+    fontFamily = inter,
+)
+
+val homeSubTitle = TextStyle(
+    fontSize = text14,
+    fontWeight = FontWeight.Medium,
+    fontFamily = inter,
+)
+
+val homeOldPrice = TextStyle(
+    fontSize = text14,
+    fontWeight = FontWeight.SemiBold,
+    fontFamily = inter,
+)
+
+val homeNewPrice = TextStyle(
+    fontSize = text20,
+    fontWeight = FontWeight.SemiBold,
+    fontFamily = inter,
+)

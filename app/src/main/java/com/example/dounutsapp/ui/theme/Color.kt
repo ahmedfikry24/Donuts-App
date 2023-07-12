@@ -15,6 +15,7 @@ val black60  = Color(0x99000000)
 val black80  = Color(0xCC000000)
 
 val white  = Color(0XFFFFFFFF)
+val white87  = Color(0xDEFFFFFF)
 val whiteBlue  = Color(0XFFD7E4F6)
 val whitePink = Color(0XFFFFC7D0)
 
@@ -22,5 +23,5 @@ val lightBlue  = Color(0x66130F26)
 
 val lightPink = Color(0XFFFED8DF)
 val pink = Color(0XFFFF9494)
-val DarkPink = Color(0XFFFF7074)
+val darkPink = Color(0XFFFF7074)
 val deepDarkPink = Color(0XFFFE554A)
