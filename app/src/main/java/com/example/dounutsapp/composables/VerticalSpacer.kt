@@ -1,4 +1,4 @@
-package com.example.dounutsapp.screens
+package com.example.dounutsapp.composables
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height

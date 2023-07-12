@@ -15,13 +15,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import com.example.dounutsapp.R
-import com.example.dounutsapp.screens.VerticalSpacer
+import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.ui.theme.size100
-import com.example.dounutsapp.ui.theme.size120
-import com.example.dounutsapp.ui.theme.size180
-import com.example.dounutsapp.ui.theme.size340
+import com.example.dounutsapp.ui.theme.size80
+import com.example.dounutsapp.ui.theme.size160
+import com.example.dounutsapp.ui.theme.size310
 import com.example.dounutsapp.ui.theme.space20
-import com.example.dounutsapp.ui.theme.space40
+import com.example.dounutsapp.ui.theme.space60
 
 @Composable
 fun DonutsImages() {
@@ -29,20 +29,20 @@ fun DonutsImages() {
         Row(
             Modifier
                 .fillMaxWidth()
-                .height(size340).padding(end = space20),
+                .height(size310).padding(end = space20),
             horizontalArrangement = Arrangement.SpaceBetween
         )
         {
             Image(
-                modifier = Modifier.size(size120),
+                modifier = Modifier.size(size100),
                 painter = painterResource(R.drawable.image_3),
                 contentDescription = ""
             )
             Column {
-                VerticalSpacer(height = space40)
+                VerticalSpacer(height = space60)
                 Image(
                     modifier = Modifier
-                        .size(size180, size120),
+                        .size(size160, size100),
                     painter = painterResource(R.drawable.donut_1),
                     contentDescription = ""
                 )
@@ -56,7 +56,7 @@ fun DonutsImages() {
                 contentScale = ContentScale.FillWidth
             )
             Image(
-                modifier = Modifier.size(size100),
+                modifier = Modifier.size(size80),
                 painter = painterResource(R.drawable.donut_2), contentDescription = "",
                 contentScale = ContentScale.FillBounds
             )
