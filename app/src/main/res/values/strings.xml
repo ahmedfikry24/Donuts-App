@@ -2,4 +2,15 @@
     <string name="app_name">Dounuts App</string>
     <string name="description_welcome">Gonuts with Donuts is a Sri Lanka dedicated food outlets for specialize manufacturing of Donuts in Colombo, Sri Lanka.</string>
     <string name="get_started">Get Started</string>
+    <string name="let_s_gonuts">Let’s Gonuts!</string>
+    <string name="order_your_favourite_donuts_from_here">Order your favourite donuts from here</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="today_offers">Today Offers</string>
+    <string name="favorite_icon">Favorite Icon</string>
+    <string name="strawberry_wheel">Strawberry Wheel</string>
+    <string name="these_baked_strawberry_donuts_are_filled_with_fresh_strawberries">These Baked Strawberry Donuts are filled with fresh strawberries...</string>
+    <string name="_20">$20</string>
+    <string name="_16">$16</string>
+    <string name="donut_image">Donut Image</string>
+    <string name="chocolate_cherry">Chocolate Cherry</string>
 </resources>
