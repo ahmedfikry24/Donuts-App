@@ -21,6 +21,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
+import com.example.dounutsapp.AppDestination
 import com.example.dounutsapp.R
 import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.screens.home.composable.DonutsCard
@@ -28,22 +30,24 @@ import com.example.dounutsapp.screens.home.composable.HomeAppBar
 import com.example.dounutsapp.screens.home.composable.TodayOffersCard
 import com.example.dounutsapp.screens.home.state.HomeUiSate
 import com.example.dounutsapp.ui.theme.black
-import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.space16
 import com.example.dounutsapp.ui.theme.space20
 import com.example.dounutsapp.ui.theme.space8
+import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.white87
 import com.example.dounutsapp.ui.theme.whiteBlue
 import com.example.dounutsapp.ui.theme.whitePink
 
 @Composable
-fun HomeScreen(padding: PaddingValues, viewModel: HomeViewModel = hiltViewModel()) {
+fun HomeScreen(
+    padding: PaddingValues, navController: NavController, viewModel: HomeViewModel = hiltViewModel()
+) {
     val state by viewModel.state.collectAsState()
-    HomeContent(padding, state)
+    HomeContent(padding, state) { navController.navigate(AppDestination.DonutInfoScreen.screen) }
 }
 
 @Composable
-private fun HomeContent(padding: PaddingValues, state: HomeUiSate) {
+private fun HomeContent(padding: PaddingValues, state: HomeUiSate, onClickDonut: () -> Unit) {
     Column(
         Modifier
             .fillMaxSize()
@@ -65,7 +69,7 @@ private fun HomeContent(padding: PaddingValues, state: HomeUiSate) {
         ) {
             items(state.todayOfferDonuts.size) {
                 val background = if (it % 2 == 0) whiteBlue else whitePink
-                TodayOffersCard(background, state.todayOfferDonuts[it])
+                TodayOffersCard(onClickDonut, background, state.todayOfferDonuts[it])
             }
         }
         VerticalSpacer(height = space16)
@@ -81,7 +85,7 @@ private fun HomeContent(padding: PaddingValues, state: HomeUiSate) {
             contentPadding = PaddingValues(horizontal = space16)
         ) {
             items(state.donuts) {
-                DonutsCard(it)
+                DonutsCard(it, onClickDonut)
             }
         }
         BottomAppBar(Modifier.fillMaxWidth(), containerColor = white87) {

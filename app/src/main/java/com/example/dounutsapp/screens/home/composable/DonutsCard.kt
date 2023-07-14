@@ -1,6 +1,7 @@
 package com.example.dounutsapp.screens.home.composable
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,10 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import com.example.dounutsapp.R
 import com.example.dounutsapp.composables.VerticalSpacer
-import com.example.dounutsapp.ui.theme.darkPink
 import com.example.dounutsapp.ui.theme.black60
-import com.example.dounutsapp.ui.theme.text20Semi
-import com.example.dounutsapp.ui.theme.text14Medium
+import com.example.dounutsapp.ui.theme.darkPink
 import com.example.dounutsapp.ui.theme.size140
 import com.example.dounutsapp.ui.theme.size160
 import com.example.dounutsapp.ui.theme.size80
@@ -30,13 +29,18 @@ import com.example.dounutsapp.ui.theme.space20
 import com.example.dounutsapp.ui.theme.space40
 import com.example.dounutsapp.ui.theme.space60
 import com.example.dounutsapp.ui.theme.space8
+import com.example.dounutsapp.ui.theme.text14Medium
+import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.white
 
 @Composable
-fun DonutsCard (imageId:Int) {
+fun DonutsCard(imageId: Int, onClick: () -> Unit) {
     Box(contentAlignment = Alignment.TopCenter) {
         Card(
-            Modifier.size(size140, size160).padding(top = space60),
+            Modifier
+                .size(size140, size160)
+                .padding(top = space60)
+                .clickable(onClick = onClick),
             shape = RoundedCornerShape(topStart = space20, topEnd = space20),
             colors = CardDefaults.cardColors(white),
         ) {
@@ -65,7 +69,7 @@ fun DonutsCard (imageId:Int) {
         }
 
         Image(
-            modifier = Modifier.size(size80),
+            modifier = Modifier.size(size80).clickable(onClick = onClick),
             painter = painterResource(imageId),
             contentDescription = stringResource(id = R.string.donut_image)
         )
