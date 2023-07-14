@@ -2,6 +2,7 @@ package com.example.dounutsapp.screens.home.composable
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -31,10 +32,6 @@ import com.example.dounutsapp.composables.HorizontalSpacer
 import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.ui.theme.black
 import com.example.dounutsapp.ui.theme.black60
-import com.example.dounutsapp.ui.theme.text12Normal
-import com.example.dounutsapp.ui.theme.text16Medium
-import com.example.dounutsapp.ui.theme.text20Semi
-import com.example.dounutsapp.ui.theme.text14Semi
 import com.example.dounutsapp.ui.theme.size210
 import com.example.dounutsapp.ui.theme.size280
 import com.example.dounutsapp.ui.theme.size35
@@ -44,15 +41,20 @@ import com.example.dounutsapp.ui.theme.space16
 import com.example.dounutsapp.ui.theme.space20
 import com.example.dounutsapp.ui.theme.space4
 import com.example.dounutsapp.ui.theme.space8
+import com.example.dounutsapp.ui.theme.text12Normal
+import com.example.dounutsapp.ui.theme.text14Semi
+import com.example.dounutsapp.ui.theme.text16Medium
+import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.white
 
 @Composable
-fun TodayOffersCard(background: Color, imageId: Int) {
+fun TodayOffersCard(onClick: () -> Unit, background: Color, imageId: Int) {
     Box(contentAlignment = Alignment.CenterEnd) {
         Card(
             Modifier
                 .width(size210)
-                .padding(end = space20),
+                .padding(end = space20)
+                .clickable(onClick = onClick),
             shape = RoundedCornerShape(space20),
             colors = CardDefaults.cardColors(background),
             elevation = CardDefaults.cardElevation(space8)
