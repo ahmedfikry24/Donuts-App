@@ -20,8 +20,8 @@ import com.example.dounutsapp.R
 import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.ui.theme.darkPink
 import com.example.dounutsapp.ui.theme.black60
-import com.example.dounutsapp.ui.theme.homeSubTitle
-import com.example.dounutsapp.ui.theme.homeTitle
+import com.example.dounutsapp.ui.theme.text14Medium
+import com.example.dounutsapp.ui.theme.text18Semi
 import com.example.dounutsapp.ui.theme.lightPink
 import com.example.dounutsapp.ui.theme.size45
 import com.example.dounutsapp.ui.theme.space16
@@ -39,13 +39,13 @@ fun HomeAppBar() {
             VerticalSpacer(height = space20)
             Text(
                 text = stringResource(R.string.let_s_gonuts),
-                style = homeTitle,
+                style = text18Semi,
                 color = darkPink
             )
             VerticalSpacer(height = space4)
             Text(
                 text = stringResource(R.string.order_your_favourite_donuts_from_here),
-                style = homeSubTitle,
+                style = text14Medium,
                 color = black60
             )
         }

@@ -28,7 +28,7 @@ import com.example.dounutsapp.screens.home.composable.HomeAppBar
 import com.example.dounutsapp.screens.home.composable.TodayOffersCard
 import com.example.dounutsapp.screens.home.state.HomeUiSate
 import com.example.dounutsapp.ui.theme.black
-import com.example.dounutsapp.ui.theme.buttonText
+import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.space16
 import com.example.dounutsapp.ui.theme.space20
 import com.example.dounutsapp.ui.theme.space8
@@ -55,7 +55,7 @@ private fun HomeContent(padding: PaddingValues, state: HomeUiSate) {
         Text(
             modifier = Modifier.padding(start = space16),
             text = stringResource(R.string.today_offers),
-            style = buttonText,
+            style = text20Semi,
             color = black
         )
         VerticalSpacer(height = space16)
@@ -72,7 +72,7 @@ private fun HomeContent(padding: PaddingValues, state: HomeUiSate) {
         Text(
             modifier = Modifier.padding(start = space16),
             text = "Donuts",
-            style = buttonText,
+            style = text20Semi,
             color = black
         )
         VerticalSpacer(height = space8)

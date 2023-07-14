@@ -20,8 +20,8 @@ import com.example.dounutsapp.R
 import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.ui.theme.darkPink
 import com.example.dounutsapp.ui.theme.black60
-import com.example.dounutsapp.ui.theme.homeNewPrice
-import com.example.dounutsapp.ui.theme.homeSubTitle
+import com.example.dounutsapp.ui.theme.text20Semi
+import com.example.dounutsapp.ui.theme.text14Medium
 import com.example.dounutsapp.ui.theme.size140
 import com.example.dounutsapp.ui.theme.size160
 import com.example.dounutsapp.ui.theme.size80
@@ -49,7 +49,7 @@ fun DonutsCard (imageId:Int) {
                 VerticalSpacer(height = space40)
                 Text(
                     text = stringResource(R.string.chocolate_cherry),
-                    style = homeSubTitle,
+                    style = text14Medium,
                     color = black60,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
@@ -57,7 +57,7 @@ fun DonutsCard (imageId:Int) {
                 VerticalSpacer(height = space8)
                 Text(
                     text = stringResource(R.string._20),
-                    style = homeNewPrice,
+                    style = text20Semi,
                     color = darkPink
                 )
                 VerticalSpacer(height = space8)
