@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.example.dounutsapp.R
 import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.screens.donutInfo.composable.DonutInfoAppBar
@@ -29,16 +30,17 @@ import com.example.dounutsapp.ui.theme.space20
 @Composable
 fun DonutInfoScreen(
     padding: PaddingValues,
+    navController: NavController,
     viewModel: DonutInfoViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
     DonutInfoContent(
         padding = padding,
         state = state,
-        onClickBack = {},
+        onClickBack = { navController.popBackStack() },
         onClickMines = viewModel::onClickMines,
         onClickPlus = viewModel::onClickPlus,
-        onClickAddToCart = {}
+        onClickAddToCart = { navController.popBackStack() }
     )
 }
 

@@ -2,12 +2,10 @@ package com.example.dounutsapp.screens.donutInfo
 
 import androidx.lifecycle.ViewModel
 import com.example.dounutsapp.screens.donutInfo.state.DonutInfoUiState
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-@HiltViewModel
 class DonutInfoViewModel : ViewModel() {
 
     private val _state = MutableStateFlow(DonutInfoUiState())
