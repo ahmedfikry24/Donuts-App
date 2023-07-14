@@ -19,6 +19,7 @@ val size32 = 32.dp
 val space100 = 100.dp
 val space60 = 60.dp
 val space40 = 40.dp
+val space35 = 35.dp
 val space20 = 20.dp
 val space16 = 16.dp
 val space12 = 12.dp
@@ -27,6 +28,8 @@ val space4 = 4.dp
 
 
 val text54 =54.sp
+val text32 =32.sp
+val text22 =22.sp
 val text20 =20.sp
 val text18 =18.sp
 val text16 =16.sp

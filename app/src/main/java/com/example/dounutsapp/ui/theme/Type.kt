@@ -25,56 +25,72 @@ val inter = FontFamily(
     Font(R.font.inter_semibold, FontWeight.SemiBold),
     Font(R.font.inter_bold, FontWeight.Bold)
 )
-val welcomeText = TextStyle(
+val text54Bold = TextStyle(
     fontSize = text54,
     fontWeight = FontWeight.Bold,
     fontFamily = inter,
 )
 
-val welcomeDescription = TextStyle(
+val text18Normal = TextStyle(
     fontSize = text18,
     fontWeight = FontWeight.Normal,
     fontFamily = inter,
 )
 
-val buttonText = TextStyle(
+val text20Semi = TextStyle(
     fontSize = text20,
     fontWeight = FontWeight.SemiBold,
     fontFamily = inter,
 )
 
-val homeTitle = TextStyle(
+val text18Semi = TextStyle(
     fontSize = text18,
     fontWeight = FontWeight.SemiBold,
     fontFamily = inter,
 )
 
-val homeDonutName = TextStyle(
+val text18Medium = TextStyle(
+    fontSize = text18,
+    fontWeight = FontWeight.Medium,
+    fontFamily = inter,
+)
+
+val text16Medium = TextStyle(
     fontSize = text16,
     fontWeight = FontWeight.Medium,
     fontFamily = inter,
 )
 
-val homeDonutDescription = TextStyle(
+val text12Normal = TextStyle(
     fontSize = text12,
     fontWeight = FontWeight.Normal,
     fontFamily = inter,
 )
 
-val homeSubTitle = TextStyle(
+val text14Medium = TextStyle(
     fontSize = text14,
     fontWeight = FontWeight.Medium,
     fontFamily = inter,
 )
 
-val homeOldPrice = TextStyle(
+val text14Semi = TextStyle(
     fontSize = text14,
     fontWeight = FontWeight.SemiBold,
     fontFamily = inter,
 )
+val text14Normal = TextStyle(
+    fontSize = text14,
+    fontWeight = FontWeight.Normal,
+    fontFamily = inter,
+)
 
-val homeNewPrice = TextStyle(
-    fontSize = text20,
-    fontWeight = FontWeight.SemiBold,
+val text32Medium = TextStyle(
+    fontSize = text32,
+    fontWeight = FontWeight.Medium,
+    fontFamily = inter,
+)
+val text22Medium = TextStyle(
+    fontSize = text22,
+    fontWeight = FontWeight.Medium,
     fontFamily = inter,
 )
