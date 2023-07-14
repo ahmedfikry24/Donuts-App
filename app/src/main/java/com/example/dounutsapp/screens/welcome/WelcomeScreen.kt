@@ -27,15 +27,15 @@ import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.screens.welcome.composable.DonutsImages
 import com.example.dounutsapp.ui.theme.darkPink
 import com.example.dounutsapp.ui.theme.black
-import com.example.dounutsapp.ui.theme.buttonText
+import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.lightPink
 import com.example.dounutsapp.ui.theme.pink
 import com.example.dounutsapp.ui.theme.size50
 import com.example.dounutsapp.ui.theme.size67
 import com.example.dounutsapp.ui.theme.space16
 import com.example.dounutsapp.ui.theme.space60
-import com.example.dounutsapp.ui.theme.welcomeDescription
-import com.example.dounutsapp.ui.theme.welcomeText
+import com.example.dounutsapp.ui.theme.text18Normal
+import com.example.dounutsapp.ui.theme.text54Bold
 import com.example.dounutsapp.ui.theme.white
 
 @Composable
@@ -58,7 +58,7 @@ private fun WelcomeContent(padding: PaddingValues, onClickButton: () -> Unit) {
                 text = "Gonuts\n" +
                         "with\n" +
                         "Donuts",
-                style = welcomeText,
+                style = text54Bold,
                 color = darkPink,
             )
             Image(
@@ -71,7 +71,7 @@ private fun WelcomeContent(padding: PaddingValues, onClickButton: () -> Unit) {
         Text(
             modifier = Modifier.padding(horizontal = space60),
             text = stringResource(R.string.description_welcome),
-            style = welcomeDescription,
+            style = text18Normal,
             color = pink
         )
         Spacer(modifier = Modifier.weight(1f))
@@ -84,7 +84,7 @@ private fun WelcomeContent(padding: PaddingValues, onClickButton: () -> Unit) {
             shape = RoundedCornerShape(size50),
             onClick = onClickButton
         ) {
-            Text(text = stringResource(R.string.get_started), style = buttonText, color = black)
+            Text(text = stringResource(R.string.get_started), style = text20Semi, color = black)
         }
         Spacer(modifier = Modifier.weight(1f))
     }

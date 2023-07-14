@@ -31,10 +31,10 @@ import com.example.dounutsapp.composables.HorizontalSpacer
 import com.example.dounutsapp.composables.VerticalSpacer
 import com.example.dounutsapp.ui.theme.black
 import com.example.dounutsapp.ui.theme.black60
-import com.example.dounutsapp.ui.theme.homeDonutDescription
-import com.example.dounutsapp.ui.theme.homeDonutName
-import com.example.dounutsapp.ui.theme.homeNewPrice
-import com.example.dounutsapp.ui.theme.homeOldPrice
+import com.example.dounutsapp.ui.theme.text12Normal
+import com.example.dounutsapp.ui.theme.text16Medium
+import com.example.dounutsapp.ui.theme.text20Semi
+import com.example.dounutsapp.ui.theme.text14Semi
 import com.example.dounutsapp.ui.theme.size210
 import com.example.dounutsapp.ui.theme.size280
 import com.example.dounutsapp.ui.theme.size35
@@ -76,13 +76,13 @@ fun TodayOffersCard(background: Color, imageId: Int) {
                 VerticalSpacer(height = space100)
                 Text(
                     text = stringResource(R.string.strawberry_wheel),
-                    style = homeDonutName,
+                    style = text16Medium,
                     color = black
                 )
                 VerticalSpacer(height = space8)
                 Text(
                     text = stringResource(R.string.these_baked_strawberry_donuts_are_filled_with_fresh_strawberries),
-                    style = homeDonutDescription,
+                    style = text12Normal,
                     color = black60
                 )
                 VerticalSpacer(height = space4)
@@ -90,13 +90,13 @@ fun TodayOffersCard(background: Color, imageId: Int) {
                     Spacer(modifier = Modifier.weight(1f))
                     Text(
                         text = stringResource(R.string._20),
-                        style = homeOldPrice.copy(textDecoration = TextDecoration.LineThrough),
+                        style = text14Semi.copy(textDecoration = TextDecoration.LineThrough),
                         color = black60
                     )
                     HorizontalSpacer(width = space4)
                     Text(
                         text = stringResource(R.string._16),
-                        style = homeNewPrice,
+                        style = text20Semi,
                         color = black
                     )
                     HorizontalSpacer(width = space8)
