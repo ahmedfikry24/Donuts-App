@@ -15,7 +15,7 @@ val black60  = Color(0x99000000)
 val black80  = Color(0xCC000000)
 
 val white  = Color(0XFFFFFFFF)
-val white87  = Color(0xDEFFFFFF)
+val white60  = Color(0xFFF7F7F7)
 val whiteBlue  = Color(0XFFD7E4F6)
 val whitePink = Color(0XFFFFC7D0)
 

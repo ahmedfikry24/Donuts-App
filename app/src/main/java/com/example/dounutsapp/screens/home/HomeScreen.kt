@@ -34,7 +34,7 @@ import com.example.dounutsapp.ui.theme.space16
 import com.example.dounutsapp.ui.theme.space20
 import com.example.dounutsapp.ui.theme.space8
 import com.example.dounutsapp.ui.theme.text20Semi
-import com.example.dounutsapp.ui.theme.white87
+import com.example.dounutsapp.ui.theme.white60
 import com.example.dounutsapp.ui.theme.whiteBlue
 import com.example.dounutsapp.ui.theme.whitePink
 
@@ -51,7 +51,7 @@ private fun HomeContent(padding: PaddingValues, state: HomeUiSate, onClickDonut:
     Column(
         Modifier
             .fillMaxSize()
-            .background(white87)
+            .background(white60)
             .padding(padding)
     ) {
         HomeAppBar()
@@ -88,7 +88,7 @@ private fun HomeContent(padding: PaddingValues, state: HomeUiSate, onClickDonut:
                 DonutsCard(it, onClickDonut)
             }
         }
-        BottomAppBar(Modifier.fillMaxWidth(), containerColor = white87) {
+        BottomAppBar(Modifier.fillMaxWidth(), containerColor = white60) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
                 Image(
                     imageVector = ImageVector.vectorResource(R.drawable.home),
