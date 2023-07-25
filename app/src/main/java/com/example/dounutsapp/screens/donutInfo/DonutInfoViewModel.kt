@@ -32,4 +32,11 @@ class DonutInfoViewModel : ViewModel() {
             )
         }
     }
+    fun onClickFavorite() {
+        _state.update {
+            it.copy(
+                isFavorite = !_state.value.isFavorite
+            )
+        }
+    }
 }

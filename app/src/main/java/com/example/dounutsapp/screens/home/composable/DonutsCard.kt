@@ -30,7 +30,7 @@ import com.example.dounutsapp.ui.theme.space40
 import com.example.dounutsapp.ui.theme.space60
 import com.example.dounutsapp.ui.theme.space8
 import com.example.dounutsapp.ui.theme.text14Medium
-import com.example.dounutsapp.ui.theme.text20Semi
+import com.example.dounutsapp.ui.theme.text16Medium
 import com.example.dounutsapp.ui.theme.white
 
 @Composable
@@ -61,7 +61,7 @@ fun DonutsCard(imageId: Int, onClick: () -> Unit) {
                 VerticalSpacer(height = space8)
                 Text(
                     text = stringResource(R.string._20),
-                    style = text20Semi,
+                    style = text16Medium,
                     color = darkPink
                 )
                 VerticalSpacer(height = space8)

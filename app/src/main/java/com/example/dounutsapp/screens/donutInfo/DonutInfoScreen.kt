@@ -40,7 +40,8 @@ fun DonutInfoScreen(
         onClickBack = { navController.popBackStack() },
         onClickMines = viewModel::onClickMines,
         onClickPlus = viewModel::onClickPlus,
-        onClickAddToCart = { navController.popBackStack() }
+        onClickAddToCart = { navController.popBackStack() },
+        onClickFavorite = viewModel::onClickFavorite
     )
 }
 
@@ -52,6 +53,7 @@ private fun DonutInfoContent(
     onClickMines: () -> Unit,
     onClickPlus: () -> Unit,
     onClickAddToCart: () -> Unit,
+    onClickFavorite: () -> Unit,
 ) {
     val cardHeight = LocalConfiguration.current.screenHeightDp / 1.7
     Column(
@@ -77,6 +79,7 @@ private fun DonutInfoContent(
             onClickMines = onClickMines,
             onClickPlus = onClickPlus,
             onClickAddToCart = onClickAddToCart,
+            onClickFavorite = onClickFavorite,
         )
     }
 }

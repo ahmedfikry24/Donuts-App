@@ -2,6 +2,7 @@ package com.example.dounutsapp.screens.donutInfo.composable
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -23,7 +24,7 @@ fun DonutQuantity(onClick: () -> Unit, text: String, quantityStatus: Boolean) {
         modifier = Modifier
             .size(size45)
             .background(background, RoundedCornerShape(space16))
-            .clickable(onClick = onClick),
+            .clickable(onClick = onClick, interactionSource = MutableInteractionSource() , indication = null),
         contentAlignment = Alignment.Center,
     ) {
         Text(text = text, style = text32Medium, color = textColor)

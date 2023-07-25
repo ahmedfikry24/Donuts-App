@@ -2,6 +2,8 @@ package com.example.dounutsapp.screens.donutInfo.composable
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -45,6 +47,7 @@ import com.example.dounutsapp.ui.theme.text18Medium
 import com.example.dounutsapp.ui.theme.text20Semi
 import com.example.dounutsapp.ui.theme.text22Medium
 import com.example.dounutsapp.ui.theme.white
+import com.example.dounutsapp.ui.theme.white60
 
 @Composable
 fun DonutInfoCard(
@@ -53,6 +56,7 @@ fun DonutInfoCard(
     onClickMines: () -> Unit,
     onClickPlus: () -> Unit,
     onClickAddToCart: () -> Unit,
+    onClickFavorite: () -> Unit,
 ) {
     Box(contentAlignment = Alignment.TopEnd) {
         Card(
@@ -61,7 +65,7 @@ fun DonutInfoCard(
                 .height(cardHeight.dp + space20)
                 .padding(top = space20),
             shape = RoundedCornerShape(topStart = space40, topEnd = space40),
-            colors = CardDefaults.cardColors(white)
+            colors = CardDefaults.cardColors(white60)
         ) {
             Column(
                 Modifier
@@ -95,7 +99,14 @@ fun DonutInfoCard(
                 VerticalSpacer(height = space20)
                 Row(horizontalArrangement = Arrangement.spacedBy(space20)) {
                     DonutQuantity(onClickMines, "-", !state.quantityStatus)
-                    Text(text = state.quantity.toString(), style = text22Medium, color = black)
+                    Box(
+                        modifier = Modifier
+                            .size(size45)
+                            .background(white, RoundedCornerShape(space16)),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(text = state.quantity.toString(), style = text22Medium, color = black)
+                    }
                     DonutQuantity(onClickPlus, "+", state.quantityStatus)
                 }
                 Spacer(modifier = Modifier.weight(1f))
@@ -125,14 +136,20 @@ fun DonutInfoCard(
             }
         }
         Row {
+            val icon = if (state.isFavorite) R.drawable.ic_favorite_fill else R.drawable.ic_favorite
             Box(
                 Modifier
                     .size(size45)
-                    .background(white, RoundedCornerShape(space16)),
+                    .background(white, RoundedCornerShape(space16))
+                    .clickable(
+                        onClick = onClickFavorite,
+                        interactionSource = MutableInteractionSource(),
+                        indication = null
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
-                    imageVector = ImageVector.vectorResource(R.drawable.ic_favorite),
+                    imageVector = ImageVector.vectorResource(icon),
                     contentDescription = stringResource(R.string.favorite_icon)
                 )
             }

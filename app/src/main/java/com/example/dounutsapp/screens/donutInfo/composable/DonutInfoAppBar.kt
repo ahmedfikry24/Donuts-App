@@ -2,6 +2,7 @@ package com.example.dounutsapp.screens.donutInfo.composable
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,7 +21,11 @@ fun DonutInfoAppBar(onClick: () -> Unit) {
         Image(
             modifier = Modifier
                 .padding(start = space16)
-                .clickable(onClick = onClick),
+                .clickable(
+                    onClick = onClick,
+                    interactionSource = MutableInteractionSource(),
+                    indication = null
+                ),
             imageVector = ImageVector.vectorResource(R.drawable.ic_back),
             contentDescription = stringResource(
                 R.string.icon_back
